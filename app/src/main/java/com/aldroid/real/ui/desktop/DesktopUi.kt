@@ -17,7 +17,7 @@ fun DesktopUi(){
     Column() {
 
         DesktopPagerUi(modifier = Modifier.fillMaxWidth().weight(1f))
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(12.dp))
         QuickAppUi()
         SearchBarUi()
 

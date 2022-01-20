@@ -6,11 +6,13 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aldroid.real.AppsState.Loaded
 import com.aldroid.real.AppsState.Loading
+import com.aldroid.real.QuickAppState.Add
 import com.aldroid.real.QuickAppState.Edit
 import com.aldroid.real.QuickAppState.Empty
 import com.aldroid.real.QuickAppState.Ready
 import com.aldroid.real.ui.getApps
 import com.aldroid.real.ui.model.AppInfo
+import com.aldroid.real.ui.openApp
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -25,6 +27,7 @@ sealed class AppsState{
 sealed class QuickAppState{
     object Empty : QuickAppState()
     class Edit(val app: AppInfo) : QuickAppState()
+    object Add : QuickAppState()
     class Ready(val app: AppInfo) : QuickAppState()
 }
 
@@ -72,6 +75,13 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         _quickApps.value = apps
     }
 
+    fun addQuickApp(position: Int){
+        val apps = _quickApps.value.toMutableList()
+        apps[position] = Add
+        _quickApps.value = apps
+        resetEdit()
+    }
+
     fun deleteQuickApp(position: Int){
         val apps = _quickApps.value.toMutableList()
         apps[position] = Empty
@@ -83,6 +93,21 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         val apps = _quickApps.value.toMutableList()
         apps[position] = Edit(appInfo)
         _quickApps.value = apps
+    }
+
+    fun resetEdit(){
+        _quickApps.value = _quickApps.value.toMutableList().map {
+            if(it is Edit){
+                Ready(it.app)
+            }else{
+                it
+            }
+        }
+    }
+
+    fun openApp(app: AppInfo){
+        getApplication<Application>().applicationContext.openApp(app)
+        resetEdit()
     }
 
 }
