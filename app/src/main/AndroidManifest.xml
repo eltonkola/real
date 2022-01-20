@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aldroid.real">
+
+    <permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.INSTALL_SHORTCUT"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal"-->
+<!--        android:label="@string/permlab_install_shortcut"-->
+<!--        android:description="@string/permdesc_install_shortcut" />-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal"-->
+<!--        android:label="@string/permlab_uninstall_shortcut"-->
+<!--        android:description="@string/permdesc_uninstall_shortcut"/>-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.READ_SETTINGS"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal"-->
+<!--        android:label="@string/permlab_read_settings"-->
+<!--        android:description="@string/permdesc_read_settings"/>-->
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.WRITE_SETTINGS"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal"-->
+<!--        android:label="@string/permlab_write_settings"-->
+<!--        android:description="@string/permdesc_write_settings"/>-->
+
+<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+<!--    <uses-permission android:name="android.permission.SET_WALLPAPER" />-->
+<!--    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />-->
+<!--    <uses-permission android:name="android.permission.VIBRATE" />-->
+<!--    <uses-permission android:name="android.permission.BIND_APPWIDGET"-->
+<!--        tools:ignore="ProtectedPermissions" />-->
+<!--    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />-->
+<!--    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />-->
+<!--    <uses-permission android:name="android.permission.APPWIDGET_LIST"/>-->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RealPhone">
+        <activity
+            android:name="com.aldroid.real.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.RealPhone"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- Intent received used to install shortcuts from other applications -->
+<!--        <receiver-->
+<!--            android:name="com.cyanogenmod.trebuchet.InstallShortcutReceiver"-->
+<!--            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <!-- Intent received used to uninstall shortcuts from other applications -->
+<!--        <receiver-->
+<!--            android:name="com.cyanogenmod.trebuchet.UninstallShortcutReceiver"-->
+<!--            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        -->
+
+        <!-- The settings provider contains Home's data, like the workspace favorites -->
+<!--        <provider-->
+<!--            android:name="com.cyanogenmod.trebuchet.LauncherProvider"-->
+<!--            android:authorities="com.cyanogenmod.trebuchet.settings"-->
+<!--            android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"-->
+<!--            android:readPermission="com.android.launcher.permission.READ_SETTINGS" />-->
+<!--        -->
+    </application>
+
+</manifest>

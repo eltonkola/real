@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Real Phone</string>
+
+    <string name="permlab_install_shortcut" msgid="1201690825493376489">"install shortcuts"</string>
+    <string name="permdesc_install_shortcut" msgid="8634424803272077038">"Allows an app to add shortcuts without user intervention."</string>
+    <string name="permlab_uninstall_shortcut" msgid="7696645932555926449">"uninstall shortcuts"</string>
+    <string name="permdesc_uninstall_shortcut" msgid="7811223557950931994">"Allows an app to remove shortcuts without user intervention."</string>
+    <string name="permlab_read_settings" msgid="3452408290738106747">"read Home settings and short cuts"</string>
+    <string name="permdesc_read_settings" msgid="1836104524215167383">"Allows an app to read the settings and shortcuts in Home."</string>
+    <string name="permlab_write_settings" msgid="1360567537236705628">"write Home settings and shortcuts"</string>
+    <string name="permdesc_write_settings" msgid="6763846563231494591">"Allows an app to change the settings and shortcuts in Home."</string>
+
+
+</resources>

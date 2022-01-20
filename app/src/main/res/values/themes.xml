@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RealPhone" parent="android:Theme.Material.NoActionBar.TranslucentDecor">
+<!--        <item name="android:statusBarColor">@color/purple_700</item>-->
+        <item name="android:windowShowWallpaper">true</item>
+
+        <item name="android:background">#33000000</item> <!-- Or any transparency or color you need -->
+<!--        <item name="android:windowNoTitle">true</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+<!--        <item name="android:windowIsFloating">true</item>-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+    </style>
+</resources>
