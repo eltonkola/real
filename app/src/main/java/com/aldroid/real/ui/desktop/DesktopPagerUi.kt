@@ -1,4 +1,4 @@
-package com.aldroid.real.ui
+package com.aldroid.real.ui.desktop
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +13,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.lerp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.aldroid.real.AppViewModel
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.calculateCurrentOffsetForPage
@@ -20,12 +22,17 @@ import com.google.accompanist.pager.rememberPagerState
 import kotlinx.coroutines.flow.collect
 import kotlin.math.absoluteValue
 
+
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun DesktopUi(){
+fun DesktopPagerUi(
+    viewModel: AppViewModel = viewModel(),
+    modifier: Modifier = Modifier
+){
     val pagerState = rememberPagerState()
 
     HorizontalPager(
+        modifier = modifier,
         count = 3,
         state = pagerState,
         //  contentPadding = PaddingValues(start = 64.dp, end = 64.dp),
@@ -40,7 +47,7 @@ fun DesktopUi(){
         Card(
             Modifier
                 .fillMaxSize()
-                .background(color)
+            //    .background(color)
 
                 .graphicsLayer() {
                     // Calculate the absolute offset for the current page from the
@@ -66,6 +73,7 @@ fun DesktopUi(){
                         fraction = 1f - pageOffset.coerceIn(0f, 1f)
                     ).value
                 },
+            backgroundColor = Color.White.copy(alpha = 0.2F)
         ) {
             Text(
                 text = "Page: $page",
