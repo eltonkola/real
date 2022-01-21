@@ -38,15 +38,15 @@ fun SearchBarUi() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(76.dp)
-            .padding(12.dp)
+            .height(68.dp)
+            .padding(6.dp)
             .clickable {
                 val intent = Intent(Intent.ACTION_WEB_SEARCH)
                 intent.putExtra(SearchManager.QUERY, "")
                 context.startActivity(intent)
             },
         elevation = 4.dp,
-        shape = RoundedCornerShape(20.dp)
+        shape = RoundedCornerShape(24.dp)
     ) {
         Row(
             modifier = Modifier.padding(12.dp).fillMaxHeight(),

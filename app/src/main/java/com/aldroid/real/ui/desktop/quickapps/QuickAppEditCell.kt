@@ -1,4 +1,4 @@
-package com.aldroid.real.ui.desktop
+package com.aldroid.real.ui.desktop.quickapps
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.core.LinearEasing

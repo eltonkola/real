@@ -15,14 +15,11 @@ import com.aldroid.real.ui.desktop.DesktopUi
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun LauncherScreen() {
-    Box(modifier = Modifier
-        .padding(top = 50.dp, bottom = 16.dp)
-        .fillMaxSize(),
+    Box(modifier = Modifier.fillMaxSize(),
     ){
 
         val drawerState = rememberBottomDrawerState(Closed)
         BottomDrawer(
-
             drawerState = drawerState,
             drawerContent = {
                 AppsDrawerUi()

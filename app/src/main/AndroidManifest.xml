@@ -54,11 +54,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RealPhone">
+        android:theme="@android:style/Theme.Material.NoActionBar.TranslucentDecor"
+        >
         <activity
             android:name="com.aldroid.real.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.RealPhone"
+            android:theme="@android:style/Theme.Material.NoActionBar"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan"
             android:clearTaskOnLaunch="true"
