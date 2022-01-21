@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Real Phone"
-include ':app'
+include ':launcher'
