@@ -11,7 +11,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aldroid.real.AppViewModel
 
@@ -25,8 +24,6 @@ fun NoteDesktop(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val note by viewModel.note.collectAsState()
-
-        Spacer(modifier = Modifier.size(80.dp))
 
         TextField(
             modifier = Modifier.fillMaxSize(),

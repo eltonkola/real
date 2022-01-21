@@ -21,7 +21,7 @@ fun MainDesktop(
     horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        Spacer(modifier = Modifier.size(80.dp))
+        Spacer(modifier = Modifier.size(20.dp))
 
         AnalogClock()
     }

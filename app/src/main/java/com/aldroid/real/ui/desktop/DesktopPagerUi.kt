@@ -44,7 +44,7 @@ fun DesktopPagerUi(
     ) {
 
     HorizontalPager(
-        modifier = Modifier.fillMaxWidth().weight(1f),
+        modifier = Modifier.fillMaxWidth().weight(1f).padding(top = 56.dp),
         count = 3,
         state = pagerState,
         //  contentPadding = PaddingValues(start = 64.dp, end = 64.dp),
