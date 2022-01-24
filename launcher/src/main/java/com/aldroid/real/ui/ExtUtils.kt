@@ -6,11 +6,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Bitmap.Config.ARGB_8888
 import android.graphics.drawable.Drawable
-import com.aldroid.real.ui.model.AppInfo
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.flow
-import kotlin.time.Duration
-import kotlin.time.ExperimentalTime
+import com.aldroid.real.model.AppInfo
 
 
 fun Context.openApp(app: AppInfo){
@@ -48,12 +44,3 @@ fun Context.getApps(type: String = Intent.CATEGORY_LAUNCHER) : List<AppInfo>{
     return appsList
 }
 
-
-@OptIn(ExperimentalTime::class)
-fun tickerFlow(period: Duration, initialDelay: Duration = Duration.ZERO) = flow {
-    delay(initialDelay)
-    while (true) {
-        emit(Unit)
-        delay(period)
-    }
-}

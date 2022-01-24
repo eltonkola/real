@@ -12,10 +12,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.aldroid.real.ui.model.AppInfo
-import com.aldroid.real.ui.theme.RealPhoneTheme
+import com.aldroid.real.model.AppInfo
 
 @Composable
 fun AppCellUi(app: AppInfo) {

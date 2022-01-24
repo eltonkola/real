@@ -14,7 +14,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aldroid.real.AppViewModel
-import com.aldroid.real.ui.model.AppInfo
+import com.aldroid.real.model.AppInfo
 import com.aldroid.real.ui.toBitmap
 
 @SuppressLint("StateFlowValueCalledInComposition")

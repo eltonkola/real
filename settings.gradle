@@ -14,4 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Real Phone"
 include ':launcher'
-//include ':weather'
+include ':launcher:weather'
+include ':launcher:calendar'
+include ':launcher:clock'

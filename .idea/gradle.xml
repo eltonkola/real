@@ -11,6 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/launcher" />
+            <option value="$PROJECT_DIR$/launcher/calendar" />
+            <option value="$PROJECT_DIR$/launcher/clock" />
+            <option value="$PROJECT_DIR$/launcher/weather" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

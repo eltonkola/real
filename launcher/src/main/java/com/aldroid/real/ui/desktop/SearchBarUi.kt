@@ -2,9 +2,7 @@ package com.aldroid.real.ui.desktop
 
 import android.app.SearchManager
 import android.content.Intent
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -21,13 +19,9 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.aldroid.real.ui.model.AppInfo
-import com.aldroid.real.ui.openApp
-import com.aldroid.real.ui.toBitmap
 import com.google.accompanist.pager.ExperimentalPagerApi
 
 @OptIn(ExperimentalPagerApi::class, androidx.compose.ui.ExperimentalComposeUiApi::class)
