@@ -47,6 +47,57 @@
 <!--    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />-->
 <!--    <uses-permission android:name="android.permission.APPWIDGET_LIST"/>-->
 
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.APPWIDGET_LIST" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+
+
+
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.INSTALL_SHORTCUT"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal" />-->
+
+<!--    <permission-->
+<!--        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"-->
+<!--        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"-->
+<!--        android:protectionLevel="normal" />-->
+
+    <!-- Self explanatory -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- To call a phone number directly without displaying the dialer -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- To read phone state -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Display notification drawer -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <!-- Ability to uninstall an app from KISS -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <!-- Android 11 now makes listing apps a non-default permission
+    https://developer.android.com/training/basics/intents/package-visibility
+    -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+
+
 
     <application
         android:allowBackup="true"

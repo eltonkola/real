@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="launcher/src/main/res/layout/fragment_widget_host.xml" value="0.2557291666666667" />
+        <entry key="launcher/src/main/res/layout/fragment_widgets.xml" value="0.29583333333333334" />
+        <entry key="launcher/src/main/res/layout/main.xml" value="0.16510416666666666" />
+        <entry key="launcher/src/main/res/layout/widget_host.xml" value="0.178125" />
+        <entry key="launcher/src/main/res/layout/widget_hoster.xml" value="0.30117753623188404" />
+        <entry key="launcher/src/main/res/layout/widhet_hoster.xml" value="0.23854166666666668" />
+        <entry key="launcher/src/main/res/menu/widget_menu.xml" value="0.16510416666666666" />
+        <entry key="weather/src/main/res/layout/water_widget_loading.xml" value="0.1" />
+        <entry key="weather/src/main/res/layout/water_widget_preview.xml" value="0.1" />
+        <entry key="weather/src/main/res/xml/weather_widget_info.xml" value="0.2989583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11 (3)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

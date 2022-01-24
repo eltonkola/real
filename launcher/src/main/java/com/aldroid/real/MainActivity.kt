@@ -1,19 +1,26 @@
 package com.aldroid.real
 
+import android.appwidget.AppWidgetHost
+import android.appwidget.AppWidgetHostView
+import android.appwidget.AppWidgetManager
+import android.appwidget.AppWidgetProviderInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
+import androidx.core.app.ActivityCompat
 import androidx.core.view.WindowCompat
+import androidx.fragment.app.FragmentActivity
 import com.aldroid.real.ui.LauncherScreen
 import com.aldroid.real.ui.theme.RealPhoneTheme
 import com.google.accompanist.insets.ProvideWindowInsets
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
-class MainActivity : ComponentActivity() {
+
+class MainActivity : FragmentActivity() { //ComponentActivity() {
     @OptIn(
         ExperimentalPagerApi::class,
         kotlinx.coroutines.InternalCoroutinesApi::class,
@@ -21,6 +28,7 @@ class MainActivity : ComponentActivity() {
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // Turn off the decor fitting system windows, which means we need to through handling
         // insets
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -43,5 +51,6 @@ class MainActivity : ComponentActivity() {
 
         }
     }
+
 
 }
