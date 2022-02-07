@@ -2,6 +2,7 @@ package com.aldroid.real.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
@@ -11,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.aldroid.real.model.AppInfo
@@ -21,9 +23,20 @@ fun AppCellUi(app: AppInfo) {
     Column(
         modifier = Modifier
             .padding(6.dp)
-            .clickable {
-                context.openApp(app)
-            },
+            .pointerInput(Unit) {
+                detectTapGestures(
+                    onLongPress = {
+                        context.deleteApp(app)
+                    },
+                    onTap = {
+                        context.openApp(app)
+                    }
+                )
+            }
+//            .clickable {
+//                context.openApp(app)
+//            }
+        ,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 

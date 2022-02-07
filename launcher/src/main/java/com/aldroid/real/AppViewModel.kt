@@ -2,6 +2,8 @@ package com.aldroid.real
 
 import android.app.Application
 import android.content.Intent
+import android.net.Uri
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.aldroid.real.AppsState.Loaded
@@ -10,8 +12,8 @@ import com.aldroid.real.QuickAppState.Add
 import com.aldroid.real.QuickAppState.Edit
 import com.aldroid.real.QuickAppState.Empty
 import com.aldroid.real.QuickAppState.Ready
-import com.aldroid.real.ui.getApps
 import com.aldroid.real.model.AppInfo
+import com.aldroid.real.ui.getApps
 import com.aldroid.real.ui.openApp
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -116,5 +118,6 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         getApplication<Application>().applicationContext.openApp(app)
         resetEdit()
     }
+
 
 }

@@ -2,10 +2,13 @@ package com.aldroid.real.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.IntentSender
+import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Bitmap.Config.ARGB_8888
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import com.aldroid.real.model.AppInfo
 
 
@@ -13,6 +16,19 @@ fun Context.openApp(app: AppInfo){
     val launchIntent = packageManager.getLaunchIntentForPackage(app.packageName.toString())
     startActivity(launchIntent)
 }
+
+fun Context.deleteApp(app: AppInfo){
+//    val intent = Intent(Intent.ACTION_UNINSTALL_PACKAGE)
+//    intent.data = Uri.parse("package:${app.packageName}")
+//    applicationContext.startActivity(intent)
+    packageManager.uninstallPackage(packageName);
+    PackageInstaller.uninstall(String, IntentSender)
+    val launchIntent = packageManager.uninstall(String, IntentSender) (app.packageName.toString())
+    startActivity(launchIntent)
+
+}
+
+
 
 fun Drawable.toBitmap() : Bitmap {
     val bitmap = Bitmap.createBitmap(
