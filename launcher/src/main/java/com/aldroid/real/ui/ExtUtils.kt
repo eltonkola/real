@@ -21,10 +21,10 @@ fun Context.deleteApp(app: AppInfo){
 //    val intent = Intent(Intent.ACTION_UNINSTALL_PACKAGE)
 //    intent.data = Uri.parse("package:${app.packageName}")
 //    applicationContext.startActivity(intent)
-    packageManager.uninstallPackage(packageName);
-    PackageInstaller.uninstall(String, IntentSender)
-    val launchIntent = packageManager.uninstall(String, IntentSender) (app.packageName.toString())
-    startActivity(launchIntent)
+//    packageManager.uninstallPackage(packageName);
+//    PackageInstaller.uninstall(String, IntentSender)
+//    val launchIntent = packageManager.uninstall(String, IntentSender) (app.packageName.toString())
+//    startActivity(launchIntent)
 
 }
 
