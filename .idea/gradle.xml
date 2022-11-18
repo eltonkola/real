@@ -16,7 +16,6 @@
             <option value="$PROJECT_DIR$/launcher/weather" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

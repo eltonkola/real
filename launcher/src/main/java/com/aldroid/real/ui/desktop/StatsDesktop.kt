@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.aldroid.real.AppViewModel
 import com.aldroid.real.clock.DigitalClock
+import com.aldroid.real.ui.widgets.FragmentWidgetContainer
 
 @Composable
 fun StatsDesktop(
@@ -22,7 +23,9 @@ fun StatsDesktop(
     ) {
 
         Spacer(modifier = Modifier.size(20.dp))
+//        DigitalClock()
 
-        DigitalClock()
+
+        FragmentWidgetContainer()
     }
 }

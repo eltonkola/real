@@ -7,6 +7,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowCompat
+import androidx.fragment.app.FragmentActivity
 import com.aldroid.real.ui.LauncherScreen
 import com.aldroid.real.ui.theme.RealPhoneTheme
 import com.google.accompanist.insets.ProvideWindowInsets
@@ -14,9 +15,8 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 
-class MainActivity : ComponentActivity() {
+class MainActivity : FragmentActivity() {
     @OptIn(
-        ExperimentalPagerApi::class,
         kotlinx.coroutines.InternalCoroutinesApi::class,
         androidx.compose.material.ExperimentalMaterialApi::class
     )
